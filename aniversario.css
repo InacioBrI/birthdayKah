@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #340202;
+}
+
+.hero-banner {
+  background-color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+}
+
+.hero-image {
+  aspect-ratio: 2.09;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .hero-image {
+    max-width: 100%;
+  }
+}
+
+.responsive-image-container {
+    width: 100%;
+    display: block;
+  }
+  
+  .responsive-image {
+    aspect-ratio: 2.09;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    display: block;
+  }
+  
+
+.birthday-message {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #340202;
+    padding: 52px 67px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.message-content {
+    color: #fff;
+    font-family: "Itim", cursive;
+    font-size: 64px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.responsive-image {
+    aspect-ratio: 2.09;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+  }
+
+  .love-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: auto;
+    padding: 30px; 
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #340202;
+}
+  
+  .love-title {
+    color: #fff;
+    font-family: Inter;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .image-container {
+    display: flex;
+    width: 670px;
+    height: 707px;
+    padding: 10px;
+    align-items: flex-end;
+    gap: 10px;
+    background-color: #340202;
+    margin: 0;
+  }
+  
+  .couple-image {
+    width: 650px;
+    height: auto;
+    aspect-ratio: 650/647;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .gallery-grid {
+    display: flex;
+    gap: 81px;
+    align-items: center;
+  }
+  
+  .gallery-image {
+    width: 400px;
+    height: 400px;
+    border-radius: 270px;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 991px) {
+    .gallery-grid {
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .gallery-image {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .gallery-grid {
+      gap: 20px;
+    }
+  
+    .gallery-image {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  
+  
+  @media (max-width: 991px) {
+    .love-title {
+      font-size: 48px;
+    }
+  
+    .image-container {
+      width: 100%;
+      height: auto;
+    }
+  
+    .couple-image {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .love-title {
+      font-size: 36px;
+    }
+  
+    .image-container {
+      padding: 5px;
+    }
+  }
+
+@media (max-width: 991px) {
+  .message-content {
+    font-size: 48px;
+  }
+
+  .birthday-message {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .message-content {
+    font-size: 32px;
+  }
+
+  .birthday-message {
+    padding: 20px;
+  }
+}
+
+.gallery-container {
+  display: flex;
+  align-items: center;
+  gap: 81px;
+  padding: 20px;
+  width: 100%;
+  overflow-x: auto;
+  background-color: #340202;
+}
+
+.gallery-item {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.gallery-image {
+  width: 400px;
+  height: 400px;
+  border-radius: 270px;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .gallery-container {
+    gap: 40px;
+    padding: 15px;
+  }
+
+  .gallery-image {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-container {
+    gap: 20px;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .gallery-image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+
+.landing-container {
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  padding: 52px 67px;
+  min-height: 100vh;
+  background-color: #340202;
+}
+
+.title {
+  color: #fff;
+  font-family: "Itim", cursive;
+  font-size: 128px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.description {
+  color: #fff;
+  text-align: center;
+  font-family: "Itim", cursive;
+  font-size: 96px;
+  font-weight: 400;
+  max-width: 1130px;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .landing-container {
+    max-width: 991px;
+    padding: 40px 30px;
+    gap: 60px;
+  }
+
+  .title {
+    font-size: 96px;
+  }
+
+  .description {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 640px) {
+  .landing-container {
+    max-width: 640px;
+    padding: 30px 20px;
+    gap: 40px;
+  }
+
+  .title {
+    font-size: 64px;
+  }
+
+  .description {
+    font-size: 48px;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+
+.landing-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #340202;
+  padding: 52px 67px;
+  gap: 80px;
+}
+
+.title {
+  color: #fff;
+  font-family: Itim;
+  font-size: 128px;
+  text-align: center;
+  margin: 0;
+}
+
+.description {
+  color: #fff;
+  font-family: Itim;
+  font-size: 96px;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .landing-section {
+    padding: 40px;
+    gap: 60px;
+  }
+
+  .title {
+    font-size: 96px;
+  }
+
+  .description {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 640px) {
+  .landing-section {
+    padding: 24px;
+    gap: 40px;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .description {
+    font-size: 30px;
+  }
+}
+
+
+.quote-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  align-items: center;
+  gap: 33px;
+  background-color: #340202;
+  border-radius: 53px;
+}
+
+.image-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.featured-image {
+  width: 708px;
+  height: 660px;
+  flex-shrink: 0;
+  border-radius: 71px;
+  object-fit: cover;
+}
+
+.quote-text {
+  color: #fff;
+  font-family: 'Itim', cursive;
+  font-size: 64px;
+  line-height: 1.5;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .quote-container {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .featured-image {
+      width: 100%;
+      height: auto;
+  }
+
+  .quote-text {
+      font-size: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .quote-container {
+      padding: 15px;
+      gap: 20px;
+  }
+
+  .featured-image {
+      height: 300px;
+  }
+
+  .quote-text {
+      font-size: 36px;
+  }
+}
+
+
+.letter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 52px 67px;
+  background-color: #340202;
+}
+
+.letter-content {
+  flex: 1;
+  max-width: 1200px;
+  color: #fff;
+  font-family: "Itim", cursive;
+  font-size: 64px;
+  line-height: 1.4;
+}
+
+.letter-content p {
+  margin: 0 0 1.4em 0;
+}
+
+.letter-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .letter-container {
+      padding: 40px;
+  }
+
+  .letter-content {
+      font-size: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .letter-container {
+      padding: 20px;
+  }
+
+  .letter-content {
+      font-size: 32px;
+  }
+}
+
+
+.player-container {
+  background: #ffffff;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  background: #ff4d4d;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #cc0000;
+}
+
+#nextSong {
+  background: #4CAF50;
+}
+
+#nextSong:hover {
+  background: #2e7d32;
+}

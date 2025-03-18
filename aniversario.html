@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Happy Birthday</title>
+        <link rel="stylesheet" href="aniversario.css">
+        <link
+        href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+        rel="stylesheet"
+        />
+    </head>
+    <body>
+    <section class="hero-banner">
+    <img
+    src="https://cdn.builder.io/api/v1/image/assets/2992c7fac379426ab641548b4f3569e0/4e6f9a44884662ad1924e5b3558c8dd02f4dd0a1483cf58f4588c1ce5a95e1ba?placeholderIfAbsent=true"
+        class="hero-image"
+        alt="Banner Image"
+        />
+    </section>
+    
+    <div class="player-container">
+        <h2>🎶 Tocando Agora</h2>
+        <p id="nomeMusica">Nenhuma música</p>
+    
+        <audio id="musica" src="musicas/musica1.mp3"></audio>
+    
+        <div class="buttons">
+            <button id="playPause" onclick="togglePlay()">▶️ Play</button>
+            <button id="nextSong" onclick="proximaMusica()">⏭ Próxima</button>
+            <button id="prevSong" onclick="voltarMusica()">⏮ Voltar</button>
+        </div>
+    </div>
+    
+    <script>
+        // Lista de músicas na pasta "musicas/"
+        const musicas = ["musicas/musica1.mp3", "musicas/musica2.mp3", "musicas/musica3.mp3",
+        "musicas/musica4.mp3","musicas/musica5.mp3","musicas/musica6.mp3","musicas/musica7.mp3",
+        ];
+        let musicaAtual = 0;
+
+        const audio = document.getElementById("musica");
+        const nomeMusica = document.getElementById("nomeMusica");
+        const playPauseBtn = document.getElementById("playPause");
+
+        // Atualiza a música no player
+        function carregarMusica() {
+            audio.src = musicas[musicaAtual];
+            nomeMusica.innerText = musicas[musicaAtual].split("/").pop(); // Exibe apenas o nome do arquivo
+        }
+
+        // Play / Pause
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.innerText = "⏸ Pausar";
+            } else {
+                audio.pause();
+                playPauseBtn.innerText = "▶️ Play";
+            }
+        }
+
+        // Próxima Música
+        function proximaMusica() {
+            musicaAtual = (musicaAtual + 1) % musicas.length; // Se for a última, volta para a primeira
+            carregarMusica();
+            audio.play();
+            playPauseBtn.innerText = "⏸ Pausar";
+        }
+
+        // Voltar Música
+        function voltarMusica() {
+            if (musicaAtual === 0) {
+                musicaAtual = musicas.length - 1; // Se estiver na primeira, volta para a última
+            } else {
+                musicaAtual--; // Caso contrário, volta para a anterior
+            }
+            carregarMusica();
+            audio.play();
+            playPauseBtn.innerText = "⏸ Pausar";
+        }
+
+        // Carrega a primeira música ao abrir o site
+        carregarMusica();
+    </script>
+
+
+    <article class="birthday-message">
+        <p class="message-content">
+          Feliz aniversário, meu amor!❤️ Você é o grande amor da minha vida, a pessoa
+          com quem desejo compartilhar cada momento, nos altos e baixos, no que der e
+          vier. Quero que saiba que nunca estará sozinha, pois estarei sempre ao seu
+          lado, te apoiando, te amando e celebrando cada instante ao seu lado. Que seu
+          dia seja tão especial quanto você!
+        </p>
+      </article>
+      
+      <main class="love-container">
+        <h1 class="love-title">Coisas que eu mais amo em você</h1>
+        <figure class="image-container">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/e370c829a30006f326eea8df4aeea578df7f7d07"
+            alt="Couple taking selfie"
+            class="couple-image"
+          />
+        </figure>
+      </main>
+      
+      <section class="gallery-container">
+        <figure class="gallery-item">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc9d4504e15c91fa1bedc021da20ff16c08f3fec"
+            alt="Couple selfie"
+            class="gallery-image"
+          />
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c4ce027e43e8d39f58bf7daf42ea88a8afb6d4b6"
+            alt="Close-up selfie"
+            class="gallery-image"
+          />
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/64a3802842b0a45895b78355d5cf0d6a560751a0"
+            alt="Elevator selfie"
+            class="gallery-image"
+          />
+        </figure>
+      </section>
+      
+      <section class="landing-section">
+        <h1 class="title">1. Seu Sorriso</h1>
+        <p class="description">
+          Quando você sorri, eu sinto uma felicidade instantânea, como se o dia
+          ficasse mais leve e bonito.
+        </p>
+
+        <h1 class="title">2. Seu Olhar</h1>
+        <p class="description">
+            Tem algo no olhar dela que me faz sentir único. Parece que, quando você me olha, não existe mais nada no mundo.
+        </p>
+
+        <h1 class="title">3. Como você se preocupa comigo</h1>
+        <p class="description">
+            Você sempre pergunta se eu comi, se dormi bem, se estou bem... Esse cuidado me faz sentir amado de um jeito que nunca senti antes.
+        </p>
+
+        <h1 class="title">4. Seu Abraço</h1>
+        <p class="description">
+            Quando você me abraço, parece que todos os problemas desaparecem. É um lugar onde me sinto seguro e completo.
+        </p>
+
+        <h1 class="title">5. Sua Risada</h1>
+        <p class="description">
+            Às vezes, eu só quero fazer algo bobo só pra ouvir essa risada, porque é a coisa mais gostosa do mundo.
+        </p>
+
+        <p class="description">
+          E diversas coisas, mas o que eu mais quero que entenda, é que eu te amo por completa!
+        </p>
+
+      </section>
+      
+      
+      <section class="quote-container">
+        <figure class="image-wrapper">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/97fc8652ddedba9a237c6cd80a86ee26147704ba?placeholderIfAbsent=true"
+            alt="Love Quote Image"
+            class="featured-image"
+          />
+        </figure>
+        <p class="quote-text">
+          Sua felicidade me da querer ganhar e consquistar cada segundo dessa
+          vida, me faz querer realizar o mundo junto contigo.
+        </p>
+      </section>
+      
+      <main class="letter-container">
+        <article class="letter-content">
+          <p>Minha linda,</p>
+          <p>
+            Hoje, ao escrever essas palavras, não consigo deixar de pensar em como
+            você transformou minha vida de uma maneira tão especial. Cada momento
+            ao seu lado é um presente, e eu sou grato por ter alguém tão incrível
+            como você ao meu lado.
+          </p>
+          <p>
+            Você me ensina a cada dia o que é o verdadeiro amor, a paciência, o
+            carinho e a beleza da vida compartilhada. Seu sorriso ilumina meus
+            dias, e seu abraço me dá a segurança de que posso ser eu mesmo, sem
+            reservas.
+          </p>
+          <p>
+            Não há palavras que possam expressar o quanto você significa para mim,
+            mas quero que saiba que você é a pessoa mais importante da minha vida.
+            Amo cada pedacinho de você e sou imensamente feliz por termos cruzado
+            nossos caminhos.
+          </p>
+          <p>
+            Com você, o mundo é mais bonito, e cada sonho parece mais alcançável.
+            Que nossa história continue sendo escrita com muito amor, alegria e
+            cumplicidade.
+          </p>
+          <p>Te amo mais do que as palavras podem dizer.</p>
+          <p>Te amo mais do que as palavras podem dizer.</p>
+          <p>Te amo mais do que as palavras podem dizer.</p>
+        </article>
+      </main>
+      
+    </body>
+    <script src="script.js"></script>
+</html>
