@@ -123,6 +123,14 @@ body{
   
     .login-input {
       height: 50px;
+      display: flex
+;
+      flex-direction: row-reverse;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-content: center;
+      align-items: center;
+      margin: 4px 0px 0px -12px;
     }
   
     .login-button {
