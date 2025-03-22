@@ -1,6 +1,6 @@
 // Senha e acesso fixos para autenticação
-const correctUsername = "namorada@example.com";
-const correctPassword = "1234";
+const correctUsername = "Kamilly";
+const correctPassword = "0209";
 
 document.getElementById("login-form").addEventListener("submit", function(event) {
   event.preventDefault(); // Impede o envio do formulário
